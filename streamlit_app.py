@@ -49,8 +49,11 @@ def main():
     about_str = \
     """
     **Peptide Spectrum Matching Solution Browser**
+
     A small webservice to check your solution for the Peptide Spectrum Matching Game presented by the Proteomics Research Group of FHOOE Hagenberg.
+
     **Contact:** [Micha Birklbauer](mailto:micha.birklbauer@gmail.com)
+    
     **GitHub:** [github.com/michabirklbauer/peptide-matching-game](https://github.com/michabirklbauer/peptide-matching-game)
     """
 
