@@ -53,14 +53,14 @@ def main():
     A small webservice to check your solution for the Peptide Spectrum Matching Game presented by the Proteomics Research Group of FHOOE Hagenberg.
 
     **Contact:** [Micha Birklbauer](mailto:micha.birklbauer@gmail.com)
-    
+
     **GitHub:** [github.com/michabirklbauer/peptide-matching-game](https://github.com/michabirklbauer/peptide-matching-game)
     """
 
     st.set_page_config(page_title = "Peptide Spectrum Matching Solution Browser",
                        page_icon = ":test_tube:",
                        layout = "centered",
-                       initial_sidebar_state = "expanded",
+                       initial_sidebar_state = "auto",
                        menu_items = {"Get Help": "https://github.com/michabirklbauer/peptide-matching-game/discussions",
                                      "Report a bug": "https://github.com/michabirklbauer/peptide-matching-game/issues",
                                      "About": about_str}
