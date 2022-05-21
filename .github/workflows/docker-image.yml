@@ -1,0 +1,21 @@
+name: Docker Image CI
+
+on:
+  workflow_dispatch:
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the Docker image
+      run: |
+        echo ${{ secrets.DOCKER_PASSWORD }} | docker login --username michabirklbauer --password-stdin
+        docker build . --file Dockerfile --tag michabirklbauer/peptidematchinggame:latest
+        docker push michabirklbauer/peptidematchinggame:latest
+        GIT_SHA="$(git rev-parse --short HEAD)"
+        docker tag michabirklbauer/peptidematchinggame:latest michabirklbauer/peptidematchinggame:$GIT_SHA
+        docker push michabirklbauer/peptidematchinggame:$GIT_SHA
