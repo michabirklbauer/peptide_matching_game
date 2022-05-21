@@ -6,6 +6,8 @@ FROM python:3.10.4
 
 LABEL maintainer="micha.birklbauer@gmail.com"
 
+RUN pip install streamlit
+
 RUN mkdir app
 COPY streamlit_app.py app
 WORKDIR app
